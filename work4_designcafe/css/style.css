@@ -208,7 +208,7 @@
 
   .sub-text-en {
     font-size: 17px;
-    padding: 50px 10% 30px 10%;
+    padding: 50px 10px 30px 10px;
     line-height: 1.29;
     text-align: center;
   }
@@ -230,11 +230,13 @@
     font-size: 16px;
     line-height: 1.8;
     letter-spacing: 2.2px;
-    width: 360px;
+    width: 350px;
   }
 
   .sub-text-ja span {
     display: inline-block;
+    font-size: 14.5px;
+    padding: 0 10px;
   }
 }
 
@@ -270,7 +272,7 @@
   max-width: 1000px;
 }
 
-/* about以外 title */
+/* about以外 section-title */
 .section-title {
   height: 78px;
   text-align: center;
@@ -279,6 +281,7 @@
 .section-title img {
   height: inherit;
 }
+/* ～776px about以外 section-title */
 
 @media screen and (max-width: 767px) {
   .container {
