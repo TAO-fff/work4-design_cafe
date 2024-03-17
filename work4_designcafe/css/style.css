@@ -453,6 +453,7 @@
 }
   }
 
+/* menu */
 .menu {
   padding-top: 108px;
 }
@@ -483,7 +484,7 @@
   margin-bottom: 98px;
 }
 
-/* menu sp*/
+/* ～767px :about sp */
 @media screen and (max-width: 767px) {
   .menu {
     padding-top: 0;
@@ -492,8 +493,7 @@
   .menu-img {
     width: 80%;
     margin: 0 auto;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding: 0 10%;
     border-radius: 0 20% 0 0;
   }
 
@@ -506,17 +506,20 @@
     text-align: center;
   }
 
+  .menu-item img {
+    border-radius: 0 20% 0 0;
+  }
+
   .menu-ttl-img {
     display: block;
-    margin-top: -3.5%;
-    margin-left: 14%;
     max-width: 220px;
+    text-align: left;
+    margin-left: 11%;
   }
 
   .menu-ttl-img img {
-    height: 50px;
-    margin: 0;
-    padding: 0;
+    height: 60px;
+    margin-left: 0;
   }
 
   .menu-text {
@@ -744,7 +747,6 @@
 
   .footer-logo img {
     width: 227px;
-    /* padding: 0 20px; */
   }
 
   .shop-information {
