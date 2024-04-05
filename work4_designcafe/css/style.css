@@ -21,7 +21,6 @@
 .header-nav ul {
   display: flex;
   gap: 75px;
-  background-color: transparent;
 }
 
 .header-nav li {
@@ -29,12 +28,10 @@
     "游ゴシック", "Yu Gothic", sans-serif;
   font-weight: bold;
   color: #fff;
-  background-color: transparent;
 }
 
 .logo {
   width: 227px;
-  background-color: transparent;
 }
 
 .sp-menu-btn,
@@ -143,8 +140,8 @@
     transform: rotate(-45deg);
     bottom: 0;
   }
-  /* /hamメニュー */
 }
+/* /hamメニュー */
 
 /* mv */
 .slider img {
@@ -152,7 +149,28 @@
   z-index: 1;
 }
 
+.slick-dotted.slick-slider {
+  margin-bottom: 0;
+}
+
+.slick-dots {
+  bottom: 0;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #fff;
+}
+
+.slick-dots li button:before {
+  color: #fff;
+}
+
 /* text area */
+.company-policy {
+  width: 100%;
+  background-color: #e8d9bf;
+}
+
 .text-container {
   max-width: 1000px;
   margin: 0 auto;
@@ -186,7 +204,6 @@
   text-align: center;
   margin: 0 auto;
 }
-
 
 .sub-text-ja span {
   display: inline-block;
@@ -230,7 +247,8 @@
     font-size: 16px;
     line-height: 1.8;
     letter-spacing: 2.2px;
-    width: 350px;
+    width: 100%;
+    max-width: 350px;
   }
 
   .sub-text-ja span {
@@ -241,7 +259,7 @@
 }
 
 /* 767～1100px :text-area sp */
-@media screen and (min-width:767px) and (max-width: 1100px) {
+@media screen and (min-width: 767px) and (max-width: 1100px) {
   .sub-text-en {
     font-size: 27px;
     padding: 90px 0 45px 0;
@@ -263,9 +281,8 @@
 }
 /*** section共通 ***/
 .container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 10px;
+  width: 100%;
+  background-color: #e8d9bf;
 }
 
 .section {
@@ -307,17 +324,22 @@
 
 /* about */
 .about-container {
+  width: 100%;
+  background-color: #e8d9bf;
+}
+
+.about {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 10px;
   text-align: center;
 }
 
 .about-wrap {
   display: flex;
-  justify-content: center;
   gap: 7%;
+  justify-content: center;
   align-items: center;
+  padding: 0 10px;
 }
 
 .about-main-img {
@@ -429,42 +451,46 @@
 }
 
 /* 767～1100px :about sp */
-@media screen and (min-width:767px) and (max-width: 1100px) {
+@media screen and (min-width: 767px) and (max-width: 1100px) {
   .about-wrap {
     gap: 3%;
   }
-  
+
   .about-main-img {
     width: 60%;
   }
-  
+
   .about-main-img img {
     max-width: 400px;
     border-radius: 0 0 10% 0;
   }
-  
-.about-text-main {
-  font-size: 36px;
-  padding-top: 48px;
-  line-height: 1.38;
-  text-align-last: left;
-}
 
-.about-text-sub {
-  font-size: 14px;
-  padding: 26px 0 55px 0;
-}
+  .about-text-main {
+    font-size: 36px;
+    padding-top: 48px;
+    line-height: 1.38;
+    text-align-last: left;
   }
+
+  .about-text-sub {
+    font-size: 14px;
+    padding: 26px 0 55px 0;
+  }
+}
 
 /* menu */
 .menu {
+  width: 100%;
+  max-width: 1000px;
   padding-top: 108px;
+  margin: 0 auto;
 }
 
 .menu-list {
   display: flex;
   justify-content: center;
   gap: 52px;
+  padding: 0 10px;
 }
 
 .menu-item {
@@ -537,19 +563,12 @@
 
 /* gallery */
 .gallery {
-  width: initial;
-  max-width: 100%;
-  margin: 0 auto;
+  background-color: #e8d9bf;
 }
 
-.gallery-nav {
-  padding-top: 27px;
-  width: unset;
-}
-
-.gallery-img-list {
+.gallery-list {
   display: flex;
-  justify-content: center;
+  width: 100%;
 }
 
 /* gallery sp*/
@@ -563,19 +582,21 @@
   .gallery-nav {
     width: 100%;
     max-width: 767px;
-    height: 295px;
     padding-top: 20px;
   }
 }
 
 /* event */
 .event {
+  max-width: 1000px;
+  margin: 0 auto;
   padding-top: 75px;
 }
 
 .event-box {
   padding-top: 42px;
   text-align: center;
+  padding: 0 10px;
 }
 
 .event-list {
@@ -669,7 +690,9 @@
 .access {
   width: unset;
   max-width: 100%;
-  margin: 75px auto 0;
+  margin: 0 auto;
+  padding-top: 75px;
+  background-color: #e8d9bf;
 }
 
 .access-map iframe {
@@ -702,7 +725,7 @@
   max-width: 1000px;
   display: flex;
   gap: 70px;
-  padding-top: 82px;
+  padding: 82px 10px 0 10px;
   margin: 0 auto;
   position: relative;
 }
@@ -764,8 +787,8 @@
 
   .footer-top-page {
     position: fixed;
-    bottom: 210px;
-    right: 4.5%;
+    bottom: 10px;
+    right: 10px;
     width: 25%;
     max-width: 100px;
   }
