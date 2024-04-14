@@ -1,4 +1,8 @@
 @charset "utf-8";
+a {
+  cursor: pointer;
+}
+
 
 /* header */
 .header-container {
@@ -358,7 +362,7 @@
 
 /* aboutのみ section-ttl */
 .section-ttl-about {
-  width: 272px;
+width: 272px;
 }
 
 .about-ttl-img {
@@ -571,6 +575,10 @@
   width: 100%;
 }
 
+.lb-data .lb-close {
+  background: url(../images/close.png) top right no-repeat;
+}
+
 /* gallery sp*/
 @media screen and (max-width: 767px) {
   .gallery {
@@ -581,8 +589,12 @@
 
   .gallery-nav {
     width: 100%;
-    max-width: 767px;
     padding-top: 20px;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    margin: 0 auto;
   }
 }
 

@@ -17,11 +17,14 @@
       href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
     />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/lightbox.min.css" />
 
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- slick -->
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- lightbox -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
   </head>
 
   <body>
@@ -202,22 +205,66 @@
 
       <div class="gallery-list">
         <div class="gallery-item">
-          <img src="./images/pc_gallary_05-100.jpg" alt="カフェ店内の様子" />
+          <a
+            href="./images/pc_gallary_05-100.jpg"
+            data-lightbox="gallery-img"
+            data-title="カフェ店内の様子"
+          >
+            <img src="./images/pc_gallary_05-100.jpg" alt="カフェ店内の様子" />
+          </a>
         </div>
+
         <div class="gallery-item">
-          <img src="./images/pc_gallary_04-100.jpg" alt="コーヒー豆" />
+          <a
+            href="./images/pc_gallary_04-100.jpg"
+            data-lightbox="gallery-img"
+            data-title="コーヒー豆"
+          >
+            <img src="./images/pc_gallary_04-100.jpg" alt="コーヒー豆" />
+          </a>
         </div>
+
         <div class="gallery-item">
-          <img src="./images/pc_gallary_03-100.jpg" alt="店内の雰囲気" />
+          <a
+            href="./images/pc_gallary_03-100.jpg"
+            data-lightbox="gallery-img"
+            data-title="店内の雰囲気"
+          >
+            <img src="./images/pc_gallary_03-100.jpg" alt="店内の雰囲気" />
+          </a>
         </div>
+
         <div class="gallery-item">
-          <img src="./images/pc_gallary_02-100.jpg" alt="カウンターの雰囲気" />
+          <a
+            href="./images/pc_gallary_02-100.jpg"
+            data-lightbox="gallery-img"
+            data-title="カウンターの雰囲気"
+          >
+            <img
+              src="./images/pc_gallary_02-100.jpg"
+              alt="カウンターの雰囲気"
+            />
+          </a>
         </div>
+
         <div class="gallery-item">
+          <a
+          href="./images/pc_gallary_01-100.jpg"
+          data-lightbox="gallery-img"
+          data-title="ラテアート"
+        >
           <img src="./images/pc_gallary_01-100.jpg" alt="ラテアート" />
+          </a>
         </div>
+
         <div class="gallery-item">
+          <a
+          href="./images/pc_gallary_03-100.jpg"
+          data-lightbox="gallery-img"
+          data-title="店内の雰囲気"
+        >
           <img src="./images/pc_gallary_03-100.jpg" alt="店内の雰囲気" />
+          </a>
         </div>
       </div>
     </section>
@@ -298,19 +345,36 @@
 
     <script>
       // スライダー
-      $(".slider").slick({
-        arrows: false, //サイド 横向き矢印を消す
-        dots: true, //画像の枚数文の点々を出す
-        // autoplay: true, //自動で画像切り替わる
-        // autoplaySpeed: 2000 //2秒ごと
+      $(function () {
+        $(".slider").slick({
+          arrows: false, //サイド 横向き矢印を消す
+          dots: true, //画像の枚数文の点々を出す
+          // autoplay: true, //自動で画像切り替わる
+          // autoplaySpeed: 2000 //2秒ごと
+        });
       });
 
-      $(".gallery-list").slick({
-        sliderToShow: 5,
-        sliderToScroll: 1,
-        arrows: false,
-        autoPlay: true,
-        autoPlaySpeed: 2000,
+      // gallery スライダー
+      $(function () {
+        $(".gallery-list").slick({
+          slidesToShow: 5,
+          slidesToScroll: 1,
+          arrows: false,
+          autoplay: true,
+          autoPlaySpeed: 2000,
+          responsive: [
+            {
+              breakpoint: 767,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                autoplay: true,
+                autoPlaySpeed: 1000,
+              },
+            },
+          ],
+        });
       });
 
       // ハンバーガー
@@ -320,6 +384,11 @@
           $(".header-nav-sp").fadeToggle();
         });
       });
+
+      lightbox.option({
+        'fitImagesInViewport': true,
+        'showImageNumberLabel':false,
+        });
     </script>
   </body>
 </html>
